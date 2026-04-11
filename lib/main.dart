@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:magang_yusuf/formdanvalid.dart';
 import 'textfield.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const TextDanField()
+      home: FormDanValid()
     );
   }
 }
