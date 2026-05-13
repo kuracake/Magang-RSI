@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:magang_yusuf/formdanvalid.dart';
-import 'halamanlist.dart';
+import 'package:magang_yusuf/halaman/halaman_home_scan.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:magang_yusuf/halaman/halaman_login.dart';
 
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initializeDateFormatting('id_ID', null);
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,11 +20,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      
+
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: FormDanValid()
+      home: HalamanHomeScan()
     );
   }
 }
